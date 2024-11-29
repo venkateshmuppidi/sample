@@ -1,0 +1,24 @@
+<form method="post" enctype="multipart/form-data" id="frmQRCode" onsubmit="generateQRCode();return false;">
+    <p>
+        <input type="text" name="fullname" id="fullname" placeholder="Full Name" required />
+    </p>
+    <p>
+        <input type="email" name="email" id="email" placeholder="Email" required />
+    </p>
+    <p>
+        <input type="file" name="picture" id="picture" required />
+    </p>
+    <input type="submit" name="submit" value="Submit" />
+</form>
+
+<div class="qrcode-image" style="display:none;">
+    <div id="content"></div>
+    <button onclick="save_qrcode_to_pdf();">Save to PDF</button>
+</div>
+
+<!-- Load jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<!-- Custom JavaScript -->
+<script src="custom.js"></script>
